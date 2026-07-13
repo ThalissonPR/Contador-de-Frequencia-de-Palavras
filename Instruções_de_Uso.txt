@@ -1,0 +1,31 @@
+Instruções de Uso:
+
+1. Abra o terminal.
+
+2. Instale as bibliotecas do ICU, caso não possua em sua máquina ainda, pois elas são necessárias para o funcionamento deste programa.
+Exemplo: sudo apt-get install libicu-dev
+
+3. Procure a pasta deste projeto.
+Exemplo: cd word-frequency-counter
+
+4. Crie um executável com o seguinte comando:
+g++ -std=c++17 principais/main.cpp principais/helpers.cpp -o main -licuuc -licui18n
+
+5. Agora, serão necessários 3 argumentos para rodar este executável: 
+[nome do executável] [estrutura utilizada] [arquivo de texto]
+Exemplo: ./main avl arquivo.txt
+
+Vale ressaltar que as estruturas disponı́veis são essas aqui:
+• Árvore AVL: avl
+• Chained Hash Table: chained
+• Open Hash Table: open
+• Árvore Rubro-Negra: rb
+
+Os arquivos de entrada precisam estar na pasta testesFinais/entrada para que
+sejam acessados pelo programa de forma correta.
+
+Ao final da execução do programa, o novo arquivo gerado será inserido na pasta
+testesFinais/saida.
+
+Observação: Caso você deseje acessar o guia de instruções presente no próprio código, basta digitar o nome do executável com um segundo argumento --help no terminal:
+Exemplo: ./main --help
